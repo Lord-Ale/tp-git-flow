@@ -18,6 +18,14 @@ API NestJS minimaliste — support du TP cours-02, Partie 2 (Git Flow).
 
 ---
 
+## Contexte des Pull Requests en TP
+
+Par défaut, les Pull Requests sont ouvertes **dans ton fork** : par exemple `release/1.1.0` est proposée vers `main` de ton dépôt forké.
+
+Si l'enseignant le demande explicitement, la Pull Request peut viser le dépôt central `GVI2026/tp-git-flow`. Sans droit d'écriture ou sans accès GitHub disponible, le scénario peut être simulé localement avec les merges indiqués dans ce README, en gardant la même logique de revue et de validation.
+
+---
+
 ## Démarrage recommandé — DevContainer (Windows / Linux / macOS)
 
 **Prérequis** : [VS Code](https://code.visualstudio.com/) + [Docker Desktop](https://www.docker.com/products/docker-desktop/) + extension [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
