@@ -20,6 +20,16 @@ export class TasksService {
     });
   }
 
+  async getStats(): Promise<{ total: number; done: number; pending: number }> {
+    const tasks = await this.prisma.task.findMany();
+    const done = tasks.filter((t) => t.done).length;
+    return {
+      total: tasks.length,
+      done,
+      pending: tasks.length - done,
+    };
+  }
+
   async findOne(id: number): Promise<Task> {
     const task = await this.prisma.task.findUnique({ where: { id } });
     if (!task) {
@@ -40,4 +50,5 @@ export class TasksService {
     await this.findOne(id);
     return this.prisma.task.delete({ where: { id } });
   }
+
 }
